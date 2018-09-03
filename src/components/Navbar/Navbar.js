@@ -90,20 +90,27 @@ const NavBar = () => {
                     <LinkText>WHAT DO WE INVESTIGATE</LinkText>
                 </LinkContainer>
                 </NavItem>
-                <NavItem eventKey={3} href="#">
+                <NavItem>
+                <LinkContainer  to="/StateOfTheArt">                
                     <LinkText>STATE-OF-THE-ART</LinkText>
+                </LinkContainer>
                 </NavItem>
-                <NavItem eventKey={3} href="#">
+                <NavItem>
+                <LinkContainer  to="/FAQ">                
                     <LinkText>FAQ</LinkText>
+                </LinkContainer>
                 </NavItem>
-                <NavItem eventKey={3} href="#">
+                <NavItem>
+                <LinkContainer to="/ContactUs">
                     <LinkText>CONTACT US</LinkText>
+                </LinkContainer>
                 </NavItem>
                 <Dropdown eventKey={4} title="Links" id="basic-nav-dropdown">
-                    <MenuItem eventKey={4.1}>Action</MenuItem>
+                    <MenuItem header>Privat Investigator's Assoc. of Utah</MenuItem>
+                    <MenuItem href="www.piav.com">PIAV</MenuItem>
+                    <MenuItem divider />
                     <MenuItem eventKey={4.2}>Another action</MenuItem>
                     <MenuItem eventKey={4.3}>Something else here</MenuItem>
-                    <MenuItem divider />
                     <MenuItem eventKey={4.3}>Separated link</MenuItem>
                 </Dropdown>
                 </Nav>
