@@ -87,7 +87,15 @@ const NavBar = () => {
                 </NavItem>
                 <NavItem>
                 <LinkContainer  to="/WhatDoWeInvestigate">
-                    <LinkText>WHAT DO WE INVESTIGATE</LinkText>
+                    <Dropdown title='SERVICES' id="basic-nav-dropdown">
+                        <MenuItem>PRE-EMPLOYMENT SCREENING</MenuItem>
+                        <MenuItem>CRIMINAL DEFENSE</MenuItem>
+                        <MenuItem>COMPLEX CIVIL LITIGATION</MenuItem>
+                        <MenuItem>MISSING PERSONS/SKIP TRACE</MenuItem>
+                        <MenuItem>CORPORATE SECURITY</MenuItem>
+                        <MenuItem>INFIDELITY AND DOMESTIC</MenuItem>
+                        <MenuItem>GENERAL INVESTIGATIVE SERVICES</MenuItem>
+                    </Dropdown>
                 </LinkContainer>
                 </NavItem>
                 <NavItem>
@@ -105,13 +113,12 @@ const NavBar = () => {
                     <LinkText>CONTACT US</LinkText>
                 </LinkContainer>
                 </NavItem>
-                <Dropdown eventKey={4} title="Links" id="basic-nav-dropdown">
+                <Dropdown title="Links" id="basic-nav-dropdown">
                     <MenuItem header>Privat Investigator's Assoc. of Utah</MenuItem>
                     <MenuItem href="www.piav.com">PIAV</MenuItem>
                     <MenuItem divider />
-                    <MenuItem eventKey={4.2}>Another action</MenuItem>
-                    <MenuItem eventKey={4.3}>Something else here</MenuItem>
-                    <MenuItem eventKey={4.3}>Separated link</MenuItem>
+                    <MenuItem>Another action</MenuItem>
+                    <MenuItem>Something else here</MenuItem>
                 </Dropdown>
                 </Nav>
             </Navbar.Collapse>
