@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import { 
     Navbar,
     Nav,
@@ -51,23 +53,42 @@ const LinkText = styled.span`
         border-bottom-color: #EFEBCA;
     }
 `
+const Collapse = styled(Navbar.Toggle)`
+    border: none;
+    && :nth-child(1n+1) {
+        background-color: #A7A37E;
+    }
+    
+`
+const Dropdown = styled(NavDropdown)`
+    && :nth-child(1) {
+        color: #A7A37E;
+    }
+    && :nth-child(2) {
+        background-color: #000000;
+    }
+`
 
 const NavBar = () => {
     return (
        <NavB inverse collapseOnSelect>
             <Navbar.Header>
                 <Navbar.Brand>
-                <a href="#brand"><RudigerText>RÜDIGER</RudigerText><InvestigationText>INVESTIGATIONS, NMS</InvestigationText></a>
+                <Link to='/'><RudigerText>RÜDIGER</RudigerText><InvestigationText>INVESTIGATIONS, NMS</InvestigationText></Link>
                 </Navbar.Brand>
-                <Navbar.Toggle />
+                <Collapse />
             </Navbar.Header>
             <Navbar.Collapse>
                 <Nav>
-                <NavItem eventKey={1} href="#">
+                <NavItem>
+                <LinkContainer  to="/WhyHireUs">
                     <LinkText>WHY HIRE US</LinkText>
+                </LinkContainer>
                 </NavItem>
-                <NavItem eventKey={2} href="#">
+                <NavItem>
+                <LinkContainer  to="/WhatDoWeInvestigate">
                     <LinkText>WHAT DO WE INVESTIGATE</LinkText>
+                </LinkContainer>
                 </NavItem>
                 <NavItem eventKey={3} href="#">
                     <LinkText>STATE-OF-THE-ART</LinkText>
@@ -78,13 +99,13 @@ const NavBar = () => {
                 <NavItem eventKey={3} href="#">
                     <LinkText>CONTACT US</LinkText>
                 </NavItem>
-                <NavDropdown eventKey={4} title="Links" id="basic-nav-dropdown">
+                <Dropdown eventKey={4} title="Links" id="basic-nav-dropdown">
                     <MenuItem eventKey={4.1}>Action</MenuItem>
                     <MenuItem eventKey={4.2}>Another action</MenuItem>
                     <MenuItem eventKey={4.3}>Something else here</MenuItem>
                     <MenuItem divider />
                     <MenuItem eventKey={4.3}>Separated link</MenuItem>
-                </NavDropdown>
+                </Dropdown>
                 </Nav>
             </Navbar.Collapse>
         </NavB> 
