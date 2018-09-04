@@ -55,6 +55,27 @@ const LinkText = styled.span`
 `
 const Collapse = styled(Navbar.Toggle)`
     border: none;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s; 
+    }
+    &:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        border-bottom-style: solid;
+        border-bottom-color: #EFEBCA;
+    }
     && :nth-child(1n+1) {
         background-color: #A7A37E;
     }
@@ -62,11 +83,35 @@ const Collapse = styled(Navbar.Toggle)`
 `
 const Dropdown = styled(NavDropdown)`
     && :nth-child(1) {
+        text-decoration: none;
         color: #A7A37E;
     }
     && :nth-child(2) {
         background-color: #000000;
     }
+`
+const Item = styled(NavItem)`
+&:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s; 
+}
+&:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    border-bottom-style: solid;
+    border-bottom-color: #EFEBCA;
+}
 `
 
 const NavBar = () => {
@@ -85,7 +130,7 @@ const NavBar = () => {
                     <LinkText>WHY HIRE US</LinkText>
                 </LinkContainer>
                 </NavItem>
-                <NavItem>
+                <Item>
                 <LinkContainer  to="/WhatDoWeInvestigate">
                     <Dropdown title='SERVICES' id="basic-nav-dropdown">
                         <MenuItem>PRE-EMPLOYMENT SCREENING</MenuItem>
@@ -97,7 +142,7 @@ const NavBar = () => {
                         <MenuItem>GENERAL INVESTIGATIVE SERVICES</MenuItem>
                     </Dropdown>
                 </LinkContainer>
-                </NavItem>
+                </Item>
                 <NavItem>
                 <LinkContainer  to="/StateOfTheArt">                
                     <LinkText>STATE-OF-THE-ART</LinkText>
