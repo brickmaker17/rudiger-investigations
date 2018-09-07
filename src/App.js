@@ -8,6 +8,7 @@ import FAQ from './pages/FAQ/FAQ';
 import ContactUs from './pages/ContactUs/ContactUs';
 import styled from 'styled-components';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer'
 import Investigator from './images/investigator.jpg';
 
 const Background = styled.div`
@@ -31,6 +32,7 @@ const App = () => {
                 <Route path='/FAQ' component={FAQ}/>
                 <Route path='/ContactUs' component={ContactUs}/>
             </Switch>
+            <Footer />
         </Background>
     );
 }
