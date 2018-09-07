@@ -6,6 +6,7 @@ const Container = styled.div`
     justify-content: center;
     height: 150px;
     width: 39vw;
+    flex-wrap: wrap;
     margin-left: 20px;
     animation: fadein 4s;
     -moz-animation: fadein 4s; /* Firefox */
@@ -48,6 +49,7 @@ const Container = styled.div`
 const SubHeading = styled.h3`
     color: #FFFFFF;
     font-size: 25px;
+    height: 30px;
 `
 const Heading = styled.h1`
     color: #A7A37E;
@@ -55,6 +57,13 @@ const Heading = styled.h1`
     font-family: 'Quantico', sans-serif;
     margin: 15px 0 0 8px;
     font-size: 30px;
+    height: 30px;
+`
+const Licensed = styled.p`
+    margin-bottom: 80px;
+    color: #EFEBCA;
+    width: 50%;
+
 `
 
 const HomePage = () => {
@@ -62,6 +71,7 @@ const HomePage = () => {
         <Container>
             <SubHeading>WELCOME TO</SubHeading>
             <Heading>RÜDIGER</Heading>
+            <Licensed>A Licensed and bonded full-service private investigators agency, Utah agency #100175</Licensed>
         </Container>
     )
 }

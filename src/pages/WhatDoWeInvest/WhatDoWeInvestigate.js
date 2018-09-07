@@ -12,7 +12,7 @@ const TextBody = styled.section`
     justify-content: center;
 `
 const TextContent = styled.p`
-    width: 57%;
+    width: 67%;
 `
 
 const WhatDoWeInvestigate = () => {

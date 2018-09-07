@@ -158,13 +158,6 @@ const NavBar = () => {
                     <LinkText>CONTACT US</LinkText>
                 </LinkContainer>
                 </NavItem>
-                <Dropdown title="Links" id="basic-nav-dropdown">
-                    <MenuItem header>Privat Investigator's Assoc. of Utah</MenuItem>
-                    <MenuItem href="www.piav.com">PIAV</MenuItem>
-                    <MenuItem divider />
-                    <MenuItem>Another action</MenuItem>
-                    <MenuItem>Something else here</MenuItem>
-                </Dropdown>
                 </Nav>
             </Navbar.Collapse>
         </NavB> 
