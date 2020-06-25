@@ -17,5 +17,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "rudiger investigations website",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brickmaker17/rudiger-investigations.git"
+  },
+  "author": "Luke Barrett <gotluke@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brickmaker17/rudiger-investigations/issues"
+  },
+  "homepage": "https://github.com/brickmaker17/rudiger-investigations#readme",
+  "devDependencies": {}
 }
